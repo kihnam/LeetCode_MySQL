@@ -14,3 +14,4 @@ SELECT  ID
   FROM  DEPARTMENT
  GROUP
     BY  ID
+    
