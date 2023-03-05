@@ -1,0 +1,8 @@
+select b.name as department, a.name as employee, a.salary as salary
+from employee as a
+left join department as b
+on a.departmentid = b.id
+where (a.salary, b.id) in (
+select max(salary), departmentid
+from employee
+group by departmentid)
